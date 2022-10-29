@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import { ThemeContext, useTheme } from './theme';
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import Topbar from './pages/global/TopBar/Topbar';
+import { AppRouter } from './router/router';
+import Sidebar from './pages/global/Sidebar/Sidebar';
+
 function App() {
+  const { value, toggleTheme } = useTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{ toggleTheme }}>
+      <ThemeProvider theme={value}>
+        <CssBaseline />
+        <div className='App'>
+          <Sidebar />
+          <main className='content'>
+            <Topbar />
+            <AppRouter />
+          </main>
+        </div>
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 
