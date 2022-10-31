@@ -1,10 +1,10 @@
 import { Box, IconButton, useTheme } from '@mui/material';
 import { useContext } from 'react';
 import { ThemeContext } from '../../../theme/index';
-import SbpayLogo from '../../../assets/logo/sbpay-logo-dark.svg';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+
 import { useStyles } from './style';
 
 const Topbar = () => {
@@ -15,9 +15,7 @@ const Topbar = () => {
   return (
     <Box className={classes.container}>
       <Box className={classes.navBar}>
-        <Box className={classes.navBarLeftLogo}>
-          <img src={SbpayLogo} alt='logo' width={100} />
-        </Box>
+        <Box className={classes.navBarLeftLogo}></Box>
         <Box className={classes.navBarRight}>
           <IconButton>
             <PersonOutlineOutlinedIcon

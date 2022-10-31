@@ -1,6 +1,7 @@
-// create context from react
 import { createContext, useMemo, useState } from 'react';
 import { createTheme } from '@material-ui/core';
+
+//create a interface for theme
 
 export const themes = (theme: any) => ({
   ...(theme === 'light' ? lightTheme : darkTheme),
@@ -28,7 +29,7 @@ const darkTheme = {
     500: '#222831',
     600: '#1b2027',
     700: '#14181d',
-    800: '#0e1014',
+    800: '#0e10 14',
     900: '#07080a',
   },
   red: {
@@ -80,7 +81,6 @@ const lightTheme = {
   },
 };
 
-//mui theme settings
 export const themeSettings = (theme: any) => {
   const colors = themes(theme);
 
@@ -122,35 +122,36 @@ export const themeSettings = (theme: any) => {
           }),
     },
     typography: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Montserrat',
       fontSize: 14,
       fontWeightLight: 300,
       fontWeightRegular: 400,
       fontWeightMedium: 500,
       fontWeightBold: 700,
       h1: {
-        fontFamily: 'Roboto',
+        fontFamily: 'Montserrat',
         fontWeight: 300,
         fontSize: '6rem',
+
         lineHeight: 1.167,
         letterSpacing: '-0.01562em',
       },
       h2: {
-        fontFamily: 'Roboto',
+        fontFamily: 'Montserrat',
         fontWeight: 300,
         fontSize: '3.75rem',
         lineHeight: 1.2,
         letterSpacing: '-0.00833em',
       },
       h3: {
-        fontFamily: 'Roboto',
+        fontFamily: 'Montserrat',
         fontWeight: 400,
         fontSize: '3rem',
         lineHeight: 1.167,
         letterSpacing: '0em',
       },
       h4: {
-        fontFamily: 'Roboto',
+        fontFamily: 'Montserrat',
         fontWeight: 400,
         fontSize: '2.125rem',
         lineHeight: 1.235,
