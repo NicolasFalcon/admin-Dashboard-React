@@ -1,7 +1,8 @@
 import { Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { MenuItem } from 'react-pro-sidebar';
-import { useEffect } from 'react';
+
+import { useStyles } from './style';
 
 interface IProps {
   title: string;
@@ -12,20 +13,15 @@ interface IProps {
 }
 
 const MenuItemSide = ({ title, to, icon, selected, setSelected }: IProps) => {
-  useEffect(() => {
-    console.log('====================================');
-    console.log(to);
-    console.log('====================================');
-  }, [to]);
-
+  const classes = useStyles();
   return (
     <MenuItem
       active={selected === title}
       onClick={() => setSelected(title)}
       icon={icon}
     >
-      <Typography>{title}</Typography>
-      <Link to={to} id='RouterNavLink' />
+      <Typography className={classes.menuItemText}>{title}</Typography>
+      <Link to={to} />
     </MenuItem>
   );
 };

@@ -11,7 +11,7 @@ export const themes = (theme: any) => ({
 
 const darkTheme = {
   black: {
-    100: '#e0ccee',
+    100: '#ffffff',
     200: '#c199dd',
     300: '#a266cb',
     400: '#8333ba',
@@ -52,7 +52,7 @@ const lightTheme = {
     300: '#3c0065',
     400: '#500087',
     500: '#6400a9',
-    600: '#8333ba',
+    600: '#8b47e5',
     700: '#a266cb',
     800: '#c199dd',
     900: '#e0ccee',
@@ -90,7 +90,7 @@ export const themeSettings = (theme: any) => {
       ...(theme === 'dark'
         ? {
             primary: {
-              main: colors.red[500],
+              main: '#ffffff',
             },
             secondary: {
               main: '#a3a3a3',
@@ -106,7 +106,7 @@ export const themeSettings = (theme: any) => {
           }
         : {
             primary: {
-              main: colors.red[500],
+              main: '#ffffff',
             },
             secondary: {
               main: colors.black[500],
