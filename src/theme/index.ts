@@ -157,6 +157,18 @@ export const themeSettings = (theme: any) => {
         lineHeight: 1.235,
         letterSpacing: '0.00735em',
       },
+      body1: {
+        fontFamily: 'Montserrat',
+        fontWeight: 400,
+        fontSize: '1rem',
+        lineHeight: 1.5,
+        letterSpacing: '0.00938em',
+      },
+      body2: {
+        fontFamily: 'Montserrat',
+        fontWeight: 400,
+        fontSize: 15,
+      },
     },
   };
 };

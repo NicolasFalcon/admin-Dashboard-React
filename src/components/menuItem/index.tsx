@@ -1,29 +1,23 @@
 import { Typography } from '@material-ui/core';
+import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { MenuItem } from 'react-pro-sidebar';
 
 import { useStyles } from './style';
 
 interface IProps {
-  title: string;
-  to: string;
-  icon: any;
-  selected: string;
-  setSelected: any;
+  title?: string;
+  icon?: any;
 }
 
-const MenuItemSide = ({ title, to, icon, selected, setSelected }: IProps) => {
+const MenuItem = ({ title, icon }: IProps) => {
   const classes = useStyles();
+
   return (
-    <MenuItem
-      active={selected === title}
-      onClick={() => setSelected(title)}
-      icon={icon}
-    >
-      <Typography className={classes.menuItemText}>{title}</Typography>
-      <Link to={to} />
-    </MenuItem>
+    <Box>
+      <p>{title}</p>
+      <img src={icon} width={30} alt='sbpay' />
+    </Box>
   );
 };
 
-export default MenuItemSide;
+export default MenuItem;

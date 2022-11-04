@@ -7,7 +7,6 @@ export const useStyles = makeStyles({
   },
   navBar: {
     display: 'flex',
-
     borderRadius: 5,
     justifyContent: 'space-between',
   },

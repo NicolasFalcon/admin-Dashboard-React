@@ -2,10 +2,11 @@ import './App.css';
 
 import { ThemeContext, useTheme } from './theme';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import Topbar from './pages/global/TopBar/Topbar';
+import Topbar from './pages/global/topBar/Topbar';
 import { AppRouter } from './router/router';
-import SidebarNav from './pages/global/Sidebar/Sidebar';
+
 import { ProSidebarProvider } from 'react-pro-sidebar';
+import SideBar from './pages/global/sideBar';
 
 function App() {
   const { value, toggleTheme } = useTheme();
@@ -16,7 +17,7 @@ function App() {
         <ThemeProvider theme={value}>
           <CssBaseline />
           <div className='App'>
-            <SidebarNav />
+            <SideBar />
             <main className='content'>
               <Topbar />
               <AppRouter />

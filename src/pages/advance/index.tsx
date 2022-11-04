@@ -1,10 +1,13 @@
+import { Box } from '@mui/material';
 import React from 'react';
+import { useStyles } from './styles';
 
 const Advance = () => {
+  const classes = useStyles();
   return (
-    <div>
-      <h1> AVANCE</h1>
-    </div>
+    <Box className={classes.container}>
+      <h1>Advance</h1>
+    </Box>
   );
 };
 
