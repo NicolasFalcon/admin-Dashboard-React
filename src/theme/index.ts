@@ -1,5 +1,5 @@
 import { createContext, useMemo, useState } from 'react';
-import { createTheme } from '@material-ui/core';
+import { createTheme } from '@mui/material';
 
 //create a interface for theme
 
@@ -16,7 +16,7 @@ const darkTheme = {
     300: '#a266cb',
     400: '#8333ba',
     500: '#222831',
-    600: '#500087',
+    600: '#A366CB',
     700: '#3c0065',
     800: '#280044',
     900: '#140022',
@@ -95,6 +95,9 @@ export const themeSettings = (theme: any) => {
             secondary: {
               main: '#a3a3a3',
             },
+            button: {
+              main: colors.red[500],
+            },
             background: {
               default: colors.black[500],
               paper: colors.grey[700],
@@ -106,10 +109,13 @@ export const themeSettings = (theme: any) => {
           }
         : {
             primary: {
-              main: '#ffffff',
+              main: colors.black[500],
             },
             secondary: {
               main: colors.black[500],
+            },
+            button: {
+              main: colors.red[500],
             },
             background: {
               default: colors.grey[100],
@@ -152,11 +158,26 @@ export const themeSettings = (theme: any) => {
       },
       h4: {
         fontFamily: 'Montserrat',
-        fontWeight: 400,
-        fontSize: '2.125rem',
+        fontWeight: 600,
+        fontSize: 22,
         lineHeight: 1.235,
         letterSpacing: '0.00735em',
       },
+      h5: {
+        fontFamily: 'Montserrat',
+        fontWeight: 600,
+        fontSize: 21,
+        lineHeight: 1.334,
+        letterSpacing: '0em',
+      },
+      h6: {
+        fontFamily: 'Montserrat',
+        fontWeight: 600,
+        fontSize: 14,
+        lineHeight: 1.6,
+        letterSpacing: '0.0075em',
+      },
+
       body1: {
         fontFamily: 'Montserrat',
         fontWeight: 400,
