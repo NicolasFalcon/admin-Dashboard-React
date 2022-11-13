@@ -7,15 +7,4 @@ export const useStyles = makeStyles({
     backgroundColor: '#FFFFFF',
     backgroundPosition: 'center',
   },
-  content: {
-    paddingTop: 10,
-    justifyContent: 'center',
-  },
-
-  cardContent: {
-    textAlign: 'left',
-  },
-  text: {
-    textAlign: 'right',
-  },
 });
