@@ -1,9 +1,14 @@
 import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles({
+  container: {
+    width: '100%',
+  },
   card: {
-    borderRadius: 20,
+    paddingTop: 10,
     width: 360,
-    height: 220,
+  },
+  content: {
+    marginTop: 10,
   },
 });

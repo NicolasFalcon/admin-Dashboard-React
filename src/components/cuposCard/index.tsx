@@ -30,7 +30,7 @@ export const CuposCard = ({ title, available, total }: IProps) => {
     >
       <Card
         sx={{
-          backgroundColor: themes(theme.palette.mode).grey[100],
+          backgroundColor: themes(theme.palette.mode).grey[800],
           borderRadius: 4,
         }}
       >

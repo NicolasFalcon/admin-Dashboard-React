@@ -10,7 +10,7 @@ import { CuposCard } from '../../components/cuposCard';
 import WelcomeCard from '../../components/welcomeCard';
 import { useStyles } from './style';
 import CardMovements from '../../components/cardMovements/index';
-import { CustomButton } from '../../components';
+import { CreditCard, CustomButton } from '../../components';
 import { themes } from '../../theme';
 import { movimientos } from '../../data/data';
 import BenefitsCarrousel from '../../components/benefitsCarrousel';
@@ -52,7 +52,7 @@ const Dashboard = () => {
           >
             <Card
               sx={{
-                backgroundColor: themes(theme.palette.mode).grey[100],
+                backgroundColor: themes(theme.palette.mode).grey[800],
                 borderRadius: 4,
               }}
             >
@@ -75,6 +75,7 @@ const Dashboard = () => {
         <Grid item xs={6} md={4}>
           <Typography variant='h4' component='h1' gutterBottom>
             <BenefitsCarrousel />
+            <CreditCard />
           </Typography>
         </Grid>
       </Grid>
